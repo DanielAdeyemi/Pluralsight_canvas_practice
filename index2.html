@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    let canvas, ctx;
+    window.onload = function() {
+      canvas = document.getElementById('myCanvas');
+      ctx = canvas.getContext('2d');
+      let img = new Image();
+      img.onload = function() {
+        drawImage(img);
+      }
+      img.src = 'img/1.jpg';
+      let wallpaper = new Image();
+      wallpaper.onload() = function() {
+
+      }
+      wallpaper.src = 'img/wallpaper.jpg';
+    }
+
+    function drawImage(img) {
+      let destX = 10;
+      let destY = 20;
+      let destWidth = 212;
+      let destHight = 212;
+      ctx.drawImage(img, destX, destY, destWidth, destHight);
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="showCanvasAsImage()">showCanvasImg</button>
+  </br>
+  <canvas id="myCanvas" width="600" height="600"></canvas>
+</body>
+
+</html>
